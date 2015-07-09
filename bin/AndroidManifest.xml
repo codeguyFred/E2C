@@ -32,7 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.qen.e2c.First" >
+        <activity
+            android:name="com.qen.e2c.First" >
         </activity>
         <!-- 移动云AppX SDK -->
         <activity android:name="com.baidu.appx.ui.BDInnerBrowser" />

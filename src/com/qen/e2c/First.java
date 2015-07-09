@@ -1,4 +1,5 @@
 package com.qen.e2c;
+
 /*
  * 作者：QenKang,采用了jxl.jar获取Excel中的数据
  */
@@ -10,30 +11,32 @@ import com.example.excel2.R;
 
 import jxl.Sheet;
 import jxl.Workbook;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class First extends Activity {
+public class First extends ActionBarActivity {
 	private List<Info> list = new ArrayList<Info>();
 	ListView ls;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		try {
 			setContentView(R.layout.showname);
 			Workbook book = Workbook.getWorkbook(new File(Environment
@@ -127,7 +130,7 @@ public class First extends Activity {
 			ViewHolder viewHolder;
 			Info info = list.get(position);
 			if (v == null) {
-				v = mInflater.inflate(R.layout.item, null);
+				v = mInflater.inflate(R.layout.item, parent, false);
 				viewHolder = new ViewHolder();
 				viewHolder.name = (TextView) v.findViewById(R.id.name);
 				viewHolder.number = (TextView) v.findViewById(R.id.number);
@@ -140,6 +143,11 @@ public class First extends Activity {
 			viewHolder.number.setText(info.getNumber());
 			final String a = viewHolder.name.getText().toString();
 			final String b = viewHolder.number.getText().toString();
+			if (position == 0) {
+				viewHolder.bt.setVisibility(View.INVISIBLE);
+			} else {
+				viewHolder.bt.setVisibility(View.VISIBLE);
+			}
 			viewHolder.bt.setOnClickListener(new View.OnClickListener() {
 
 				@Override

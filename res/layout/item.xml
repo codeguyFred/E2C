@@ -17,11 +17,6 @@
         android:text="TextView"
         android:textSize="16dp" />
 
-    <View
-        android:layout_width="0.5dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/black" />
-
     <TextView
         android:id="@+id/number"
         android:layout_width="0dp"
@@ -32,19 +27,13 @@
         android:ems="6"
         android:text="TextView"
         android:textSize="14dp" />
-
-    <View
-        android:layout_width="0.5dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/black" />
-
-    <Button
+<Button 
         android:id="@+id/call"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginRight="0dp"
         android:layout_weight="1"
-        android:textColor="#1A5D83"
-        android:text="操作" />
+        android:text="操作" />/>
+  
 
 </LinearLayout>

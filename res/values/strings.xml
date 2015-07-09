@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">E2C</string>
-    <string name="hello_world">把你的Excel按照联系人2列N行的方式排列，左边为名字，右边为号码，命名为"mytest.xls",放在外部存储根目录,本产品可用于社团，企业等组织快速查找和使用联系方式，可用于拨打电话和发送短信;开发所有权归:QenKang(康胜程)所有，确认即接受承认上述内容。</string>
+    <string name="hello_world">把你的Excel按照联系人2列N行的方式排列，左边为名字，右边为号码，命名为"mytest.xls",放在外部存储根目录,本产品可用于社团，企业等组织快速查找和使用联系方式，可用于拨打电话和发送短信;开发所有权归:QenKang所有，确认即接受承认上述内容。</string>
     <string name="action_settings">Settings</string>
 
 </resources>
